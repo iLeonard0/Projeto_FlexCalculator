@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ic_oil"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="48dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/oil_barrel"
+        app:layout_constraintEnd_toEndOf="@+id/ic_gasolina"
+        app:layout_constraintTop_toBottomOf="@+id/ic_gasolina" />
+
+    <ImageView
+        android:id="@+id/ic_gasolina"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/blackgas"
+        app:layout_constraintBottom_toBottomOf="@+id/consume_gasoline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consume_gasoline" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/consume_gasoline"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_gasolina"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/consumo_gas_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Consumo com Gasolina (Litros por KM)"
+            android:importantForAccessibility="no" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/consume_oil"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="@+id/consume_gasoline"
+        app:layout_constraintTop_toBottomOf="@+id/consume_gasoline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/consumo_oil_lt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Consumo com Álcool (Litros por KM)"
+            android:importantForAccessibility="no" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ic_valor_gasolina"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="48dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="@+id/ic_oil"
+        app:layout_constraintTop_toBottomOf="@+id/ic_oil"
+        app:srcCompat="@drawable/ic_money" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value_of_gas"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="@+id/consume_oil"
+        app:layout_constraintStart_toStartOf="@+id/consume_oil"
+        app:layout_constraintTop_toBottomOf="@+id/consume_oil">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/valor_gasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preço da Gasolina por Litro"
+            android:importantForAccessibility="no" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ic_valor_alcool"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/ic_valor_gasolina"
+        app:layout_constraintTop_toBottomOf="@+id/ic_valor_gasolina"
+        app:srcCompat="@drawable/ic_money" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value_of_oil"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/value_of_gas"
+        app:layout_constraintTop_toBottomOf="@+id/value_of_gas">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/valor_alcool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preço do Álcool por Litro" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/botao_busca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Buscar"
+        app:layout_constraintEnd_toEndOf="@+id/value_of_oil"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/value_of_oil"
+        app:layout_constraintTop_toBottomOf="@+id/value_of_oil" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

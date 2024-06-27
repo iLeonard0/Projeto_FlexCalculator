@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultadoFlexCalculator">
+
+    <ImageView
+        android:id="@+id/ic_escolha"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/text_escolha_combustivel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_escolha_combustivel"
+        app:srcCompat="@drawable/chooseclick" />
+
+    <TextView
+        android:id="@+id/text_escolha_combustivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="no"
+        android:text="Escolha o tipo de combustível:"
+        app:layout_constraintStart_toEndOf="@+id/ic_escolha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/tipos_de_combustiveis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_escolha_combustivel"
+        app:layout_constraintTop_toBottomOf="@+id/text_escolha_combustivel">
+
+        <RadioButton
+            android:id="@+id/Gasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:importantForAccessibility="no"
+            android:text="Gasolina" />
+
+        <RadioButton
+            android:id="@+id/Alcool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:text="Álcool" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_consumo_especifico"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/text_escolha_combustivel"
+        app:layout_constraintTop_toBottomOf="@+id/tipos_de_combustiveis">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/consumo_especifico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Consumo específico (litros por km)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ic_carro"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_input_consumo_especifico"
+        app:layout_constraintStart_toStartOf="@+id/ic_escolha"
+        app:layout_constraintTop_toTopOf="@+id/text_input_consumo_especifico"
+        app:srcCompat="@drawable/carblack" />
+
+    <Button
+        android:id="@+id/calcularConsumo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="@+id/text_input_consumo_especifico"
+        app:layout_constraintStart_toStartOf="@+id/text_input_consumo_especifico"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_consumo_especifico" />
+
+    <ImageView
+        android:id="@+id/ic_flecha_resultado"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="82dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_resultado"
+        app:layout_constraintStart_toStartOf="@+id/ic_carro"
+        app:layout_constraintTop_toBottomOf="@+id/ic_carro"
+        app:srcCompat="@drawable/flecha_direita" />
+
+    <TextView
+        android:id="@+id/text_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Resultado:"
+        app:layout_constraintStart_toStartOf="@+id/calcularConsumo"
+        app:layout_constraintTop_toBottomOf="@+id/calcularConsumo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
