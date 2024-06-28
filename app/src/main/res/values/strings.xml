@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">FlexFuel Optimize</string>
+    <string name="buscar">Buscar</string>
+    <string name="preco_do_lcool_por_litro">Preço do Álcool por Litro</string>
+    <string name="preco_da_gasolina_por_litro">Preço da Gasolina por Litro</string>
+    <string name="consumo_com_alcool_litros_por_km">Consumo com Álcool (Litros por KM)</string>
+    <string name="consumo_com_gasolina_litros_por_km">Consumo com Gasolina (Litros por KM)</string>
+    <string name="resultado">Resultado:</string>
+    <string name="calcular">Calcular</string>
+    <string name="consumo_especifico_litros_por_km">Consumo específico (litros por km)</string>
+    <string name="alcool">Álcool</string>
+    <string name="gasolina">Gasolina</string>
+    <string name="escolha_o_tipo_de_combustivel">Escolha o tipo de combustível:</string>
+    <string name="preco_do_alcool_por_litro">Preço do Álcool por Litro</string>
+
 </resources>

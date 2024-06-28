@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultadoFlexCalculator">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/ic_escolha"
@@ -25,7 +29,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:importantForAccessibility="no"
-        android:text="Escolha o tipo de combustível:"
+        android:text="@string/escolha_o_tipo_de_combustivel"
         app:layout_constraintStart_toEndOf="@+id/ic_escolha"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,14 +50,14 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:importantForAccessibility="no"
-            android:text="Gasolina" />
+            android:text="@string/gasolina" />
 
         <RadioButton
             android:id="@+id/Alcool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            android:text="Álcool" />
+            android:text="@string/alcool" />
 
     </RadioGroup>
 
@@ -61,6 +65,7 @@
         android:id="@+id/text_input_consumo_especifico"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
         app:layout_constraintStart_toStartOf="@+id/text_escolha_combustivel"
         app:layout_constraintTop_toBottomOf="@+id/tipos_de_combustiveis">
 
@@ -68,7 +73,7 @@
             android:id="@+id/consumo_especifico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Consumo específico (litros por km)" />
+            android:hint="@string/consumo_especifico_litros_por_km" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -78,6 +83,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/text_input_consumo_especifico"
         app:layout_constraintStart_toStartOf="@+id/ic_escolha"
         app:layout_constraintTop_toTopOf="@+id/text_input_consumo_especifico"
+        android:importantForAccessibility="no"
         app:srcCompat="@drawable/carblack" />
 
     <Button
@@ -85,7 +91,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Calcular"
+        android:importantForAccessibility="no"
+        android:text="@string/calcular"
         app:layout_constraintEnd_toEndOf="@+id/text_input_consumo_especifico"
         app:layout_constraintStart_toStartOf="@+id/text_input_consumo_especifico"
         app:layout_constraintTop_toBottomOf="@+id/text_input_consumo_especifico" />
@@ -98,6 +105,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/text_resultado"
         app:layout_constraintStart_toStartOf="@+id/ic_carro"
         app:layout_constraintTop_toBottomOf="@+id/ic_carro"
+        android:importantForAccessibility="no"
         app:srcCompat="@drawable/flecha_direita" />
 
     <TextView
@@ -105,8 +113,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Resultado:"
+        android:text="@string/resultado"
         app:layout_constraintStart_toStartOf="@+id/calcularConsumo"
         app:layout_constraintTop_toBottomOf="@+id/calcularConsumo" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
